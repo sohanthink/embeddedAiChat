@@ -3,10 +3,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 h-full w-full">
-      <div className="flex flex-col h-screen items-center justify-between p-5">
-        <h3 className='text-[40px] font-sans font-bold'>Hey there,<br/> What would you like to know?</h3>
-        <ChatBox/>
+    <div className="bg-gradient-to-r from-violet-600 to-indigo-600 h-full w-full">
+      <div className="flex flex-col h-screen items-center justify-between p-5 gap-3">
+        <ChatBox />
       </div>
     </div>
   );
