@@ -78,7 +78,7 @@ export default function ChatBox() {
       <h3 className="text-[40px] font-sans font-bold text-white">
         Hey there,
         <br /> What would you like to know about{" "}
-        <span className="text-fuchsia-300">embeddedExpert?</span>
+        <span className="bg-fuchsia-300 text-black p-2">embeddedExpert?</span>
       </h3>
       <div className="messages overflow-y-auto py-4 h-[650px]">
         {messages.map((msg, index) => (
@@ -97,7 +97,11 @@ export default function ChatBox() {
               )}
             </strong>{" "}
             <span
-              className={`${msg.role === "assistant" ? "w-3/4" : "font-bold"}`}
+              className={`${
+                msg.role === "assistant"
+                  ? "w-3/4 bg-slate-600 p-3 rounded-lg"
+                  : "font-bold bg-purple-400 p-2 text-black rounded-lg"
+              }`}
             >
               {msg.content}
             </span>
@@ -105,9 +109,9 @@ export default function ChatBox() {
         ))}
         <div ref={messageEndRef} />
       </div>
-      <div className="p-4 flex items-center">
+      <div className="p-4 flex items-center mb-3">
         <input
-          className="text-emerald-950 w-full p-3 rounded-full border-2 mr-2"
+          className="text-emerald-950 w-full px-4 py-6 rounded-xl border-2 mr-2"
           placeholder="Ask Anything about embeddedExpert !!"
           type="text"
           value={userInput}
@@ -122,7 +126,7 @@ export default function ChatBox() {
         <button
           onClick={sendMessage}
           disabled={loading || !userInput.trim()}
-          className="bg-blue-500 text-white p-3 rounded-full"
+          className="bg-blue-500 text-white p-6 rounded-xl cursor-pointer"
         >
           {loading ? "Sending..." : "Send"}
         </button>
