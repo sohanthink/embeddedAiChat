@@ -78,7 +78,7 @@ export default function ChatBox() {
       <h3 className="text-[40px] font-sans font-bold text-white">
         Hey there,
         <br /> What would you like to know about{" "}
-        <span className="bg-fuchsia-300 text-black p-2">embeddedExpert?</span>
+        <span className="bg-slate-200 text-black p-2">embeddedExpert?</span>
       </h3>
       <div className="messages overflow-y-auto py-4 h-[650px]">
         {messages.map((msg, index) => (
@@ -100,7 +100,7 @@ export default function ChatBox() {
               className={`${
                 msg.role === "assistant"
                   ? "w-3/4 bg-slate-600 p-3 rounded-xl rounded-tl-none"
-                  : "font-bold bg-purple-400 p-2 text-black rounded-xl rounded-tr-none"
+                  : "font-bold bg-slate-100 p-2 text-black rounded-xl rounded-tr-none"
               }`}
             >
               {msg.content}
@@ -126,7 +126,7 @@ export default function ChatBox() {
         <button
           onClick={sendMessage}
           disabled={loading || !userInput.trim()}
-          className="bg-blue-500 text-white p-6 rounded-xl cursor-pointer"
+          className="bg-slate-700 text-white p-6 rounded-xl cursor-pointer"
         >
           {loading ? "Sending..." : "Send"}
         </button>
