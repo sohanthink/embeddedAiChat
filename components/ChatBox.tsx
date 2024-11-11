@@ -99,8 +99,8 @@ export default function ChatBox() {
             <span
               className={`${
                 msg.role === "assistant"
-                  ? "w-3/4 bg-slate-600 p-3 rounded-lg"
-                  : "font-bold bg-purple-400 p-2 text-black rounded-lg"
+                  ? "w-3/4 bg-slate-600 p-3 rounded-xl rounded-tl-none"
+                  : "font-bold bg-purple-400 p-2 text-black rounded-xl rounded-tr-none"
               }`}
             >
               {msg.content}
