@@ -1,0 +1,23 @@
+{
+  "companyName": "Embedded Expert",
+  "about": "Embedded Expert provides high-quality embedded system solutions and consultancy.",
+  "services": [
+    "Embedded Systems Development",
+    "Consulting Services",
+    "Training Programs"
+  ],
+  "faq": [
+    {
+      "question": "What services do you offer?",
+      "answer": "We specialize in embedded systems development, consulting, and training."
+    },
+    {
+      "question": "Where are you located?",
+      "answer": "We are based in XYZ City, and serve clients globally."
+    },
+    {
+      "question": "How can I contact you?",
+      "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io."
+    }
+  ]
+}
