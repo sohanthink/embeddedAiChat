@@ -74,11 +74,13 @@ export default function ChatBox() {
   };
 
   return (
-    <div className="chat-box w-2/4 flex flex-col justify-between h-screen">
-      <h3 className="text-[40px] font-sans font-bold text-white">
+    <div className="chat-box w-full md:w-2/4 flex flex-col justify-between h-screen">
+      <h3 className="text-lg md:text-[40px] font-sans font-bold text-white leading-7 md:leading-10">
         Hey there,
         <br /> What would you like to know about{" "}
-        <span className="bg-slate-200 text-black p-2">embeddedExpert?</span>
+        <span className="bg-slate-200 text-black p-2 rounded-e-full leading-10 md:leading-[80px]">
+          embeddedExpert?
+        </span>
       </h3>
       <div className="messages overflow-y-auto py-4 h-[650px]">
         {messages.map((msg, index) => (
