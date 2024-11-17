@@ -1,0 +1,67 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "review": "Israel is a great instructor. Every step is explained not only what to do but why. I have a much deeper understanding. I would recommend this course over any other. Not relying on some library that obscures what is happening helps students really understand the processor properly.",
+      "course_name": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+      "course_link": "https://study.embeddedexpert.io/p/modern-bare-metal-embedded-c-programming-from-ground-up111",
+      "name": "Jeff R."
+    },
+    {
+      "id": 2,
+      "review": "I thought this was going to be a course that followed another book, but when he directed us to the user/dev documentation to find answers, I saw this was something special. Problem-solving should always be at the focus of any programming course, even above syntaxt and technology. Very good start to this course.",
+      "course_name": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+      "course_link": "https://study.embeddedexpert.io/p/modern-bare-metal-embedded-c-programming-from-ground-up111",
+      "name": "Abigail J."
+    },
+    {
+      "id": 3,
+      "review": "Explanation is really good but could go deeper into some stuff. Especially for beginners like me it is hard to understand some topics which I never heard before. But like many courses they don´t share their slides which is really a shame since udemy also blocked the screenshot function it is really hard and unnecessary complex to take notes.",
+      "course_name": "ARM Assembly Language From Ground Up™ 1",
+      "course_link": "https://study.embeddedexpert.io/p/arm-assem-1",
+      "name": "Pascal W."
+    },
+    {
+      "id": 4,
+      "review": "This course is amazing. It takes you from absolute beginner to expert in programming STM32 MCU. It taught you all the basic especially reading the reference manual. I highly recommend the instructor if you would like to learn about embedded systems.",
+      "course_name": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+      "course_link": "https://study.embeddedexpert.io/p/modern-bare-metal-embedded-c-programming-from-ground-up111",
+      "name": "Aisha A."
+    },
+    {
+      "id": 5,
+      "review": "Very enlightening and eye opening .I always wondered about how different logic gates come together to create a microarchitecture and then and instruction set and then and then a full fledged architecture like ARM . This course has been able to explain all of that. Looking forward to the rest of the course.",
+      "course_name": "ARM Assembly Language From Ground Up™ 1",
+      "course_link": "https://study.embeddedexpert.io/p/arm-assem-1",
+      "name": "Marvin"
+    },
+    {
+      "id": 6,
+      "review": "The course is well structured and detailed. It's good for beginners and advanced students as the examples are all in assembly language which is not offered by other instructors. I am waiting for more examples to be added and i really enjoyed this course.",
+      "course_name": "ARM Assembly Language From Ground Up™ 1",
+      "course_link": "https://study.embeddedexpert.io/p/arm-assem-1",
+      "name": "Nishad P."
+    },
+    {
+      "id": 7,
+      "review": "The course is explained in a friendly manner, the instructor tells what each line of code does and demonstrates the result code which is really satisfying, it would be also great if he could had shown the use of usefull API's like CMSIS-RTOS.",
+      "course_name": "Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 1",
+      "course_link": "https://study.embeddedexpert.io/p/rtos1",
+      "name": "Abraham R."
+    },
+    {
+      "id": 8,
+      "review": "Excellent course. I am an embedded systems lecturer at local college and I must say, I found the content very useful and well presented. I recommend this to any embedded systems student.",
+      "course_name": "Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 1",
+      "course_link": "https://study.embeddedexpert.io/p/rtos1",
+      "name": "James K."
+    },
+    {
+      "id": 9,
+      "review": "Well taught. The course goes deep into key areas like the design of scheduling algorithms and even explaining the algorithms using animations, this makes the learning process very easy.",
+      "course_name": "Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 1",
+      "course_link": "https://study.embeddedexpert.io/p/rtos1",
+      "name": "Limd"
+    }
+  ]
+}

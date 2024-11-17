@@ -1,0 +1,39 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "testimonial": "I am very satisfied, the contents are excellent and the used didactics are very effective, which guarantees the quality of learning. Also, the support is excellent. I have several years of experience in the field of firmware in industrial automation, but I wanted to go deeper with the STM32 family and, therefore, I decided to take the various courses, and I consider them to be high-level courses. I recommend all the courses, especially as they have an excellent cost/benefit ratio.",
+      "name": "Cesar Cassiolato",
+      "designation": "Electronic Engineer",
+      "country": "Brazil"
+    },
+    {
+      "id": 2,
+      "testimonial": "All the course I took are great! In all of them I learned new and useful things that I use in my personal projects, and also they helped me to achieve a job as a software embedded engineer. Also, I'm still taking them to learn new things and improve my skills in embedded systems. I totally recommend these courses! And thank you to the Israel to share his knowledge to everyone!",
+      "name": "Ricardo Escarcega",
+      "designation": "Embedded SoftwareEngineer",
+      "country": "Mexico"
+    },
+    {
+      "id": 3,
+      "testimonial": "The material offered by your courses is one of the most systematic and easily understandable for beginners.I would also like to note that only your courses cover a large range of topics from Embedded Software Development and Embedded Systems itself. Not so long ago, I switched to using your courses through your platform and I hope it will develop. About me , my name is Ivan and I am a Design and Application Engineer from the Mechanical and Electrical field of Marine HVAC system, I am from Russia, I am 37 years old. I have a higher education in the field of Operation and Maintenance of Motor transport (Automotive). After many years of experience as an engineer in my specialty, I came across the fact that it became necessary to study Embedded systems and their programming, and so I found the content I needed in your courses.I hope you will develop and graduate new courses. Personally, I would really like to see topics dedicated to communication buses - CAN, CAN FD, LIN, RS-485, FlexRay and so on.",
+      "name": "Ivan",
+      "designation": "Design and Application Engineer",
+      "country": "Russia"
+    },
+    {
+      "id": 4,
+      "testimonial": "I have done several of the EmbeddedExpertIO courses. I have enjoyed all of them and gained valuable additional knowledge and skills. Has helped me to obtain more work in my freelancing business.",
+      "name": "Simon Morrison",
+      "designation": "Freelance Firmware Developer & Consultant",
+      "country": "Canada"
+    },
+    {
+      "id": 5,
+      "testimonial": "Thanks to Israel's course, I discovered my passion for STM32 microcontrollers and have found true love in it. I previously only knew how to design boards with less powerful controllers. Now, I can incorporate STM32 controllers into my custom boards and program them. I am now on the path to becoming a complete embedded software and hardware engineer, thanks to the ongoing courses. I am grateful for the opportunity provided by Israel to enhance my skills and become a better version of myself.",
+      "name": "Evans Honu",
+      "designation": "Robotics Hardware Design Engineer",
+      "country": "Ghana"
+    }
+  ]
+}

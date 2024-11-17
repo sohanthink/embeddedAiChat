@@ -70,7 +70,7 @@ export default async function handler(
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo", // Chat model endpoint
       messages,
-      max_tokens: 100,
+      max_tokens: 1000,
     });
 
     const reply = completion.choices?.[0]?.message?.content?.trim() || "";

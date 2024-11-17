@@ -74,7 +74,7 @@ export default function ChatBox() {
   };
 
   return (
-    <div className="chat-box w-full md:w-2/4 flex flex-col justify-between h-screen">
+    <div className="chat-box w-full md:w-2/4 flex flex-col justify-between h-[95vh] md:h-screen">
       <h3 className="text-lg md:text-[40px] font-sans font-bold text-white leading-7 md:leading-10">
         Hey there,
         <br /> What would you like to know about{" "}

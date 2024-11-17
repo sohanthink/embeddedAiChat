@@ -1,6 +1,27 @@
 {
   "companyName": "Embedded Expert",
-  "about": "Embedded Expert provides high-quality embedded system solutions and consultancy.",
+  "about": "The Ultimate Platform for Embedded Systems Career Development",
+  "technologies": [
+    "TensorFlow Lite",
+    "STM-32 IDE",
+    "STM-32",
+    "TouchGFX",
+    "MQTT",
+    "IBM Watson IoT",
+    "Google Cloud",
+    "Microsoft Azure IoT",
+    "AWS IoT",
+    "Amazon RTOS",
+    "GNU",
+    "Bluetooth",
+    "ARM KEIL",
+    "CMSIS",
+    "LoRa",
+    "USB",
+    "4G/LTE",
+    "NFC"
+  ],
+
   "services": [
     "Embedded Systems Development",
     "Consulting Services",
