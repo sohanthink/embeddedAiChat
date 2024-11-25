@@ -1,0 +1,22 @@
+{
+  "technologies": [
+    "TensorFlow Lite",
+    "STM-32 IDE",
+    "STM-32",
+    "TouchGFX",
+    "MQTT",
+    "IBM Watson IoT",
+    "Google Cloud",
+    "Microsoft Azure IoT",
+    "AWS IoT",
+    "Amazon RTOS",
+    "GNU",
+    "Bluetooth",
+    "ARM KEIL",
+    "CMSIS",
+    "LoRa",
+    "USB",
+    "4G/LTE",
+    "NFC"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "type": "AffiliatePartner",
+      "link": "https://embeddedexpert.io/affiliate#form",
+      "reasons": [
+        {
+          "id": 1,
+          "title": "We Pay The Highest Commissions",
+          "reason": "Our commission structure is straightforward, offering 30%-40% commissions on all courses. You earn on every sale made through your referral link without worrying about creating products or handling customer service."
+        },
+        {
+          "id": 2,
+          "title": "We Offer a Wide Range of Products",
+          "reason": "Our affiliate program includes a variety of embedded systems courses, enabling affiliates to target diverse audiences effectively."
+        },
+        {
+          "id": 3,
+          "title": "Dedicated Support Team",
+          "reason": "Our affiliate team provides marketing materials, training, and support to ensure your success as an affiliate."
+        }
+      ]
+    },
+    {
+      "type": "CompanyInfo",
+      "name": "Embedded Expert",
+      "about": "The Ultimate Platform for Embedded Systems Career Development",
+      "services": [
+        "Embedded Systems Development",
+        "Consulting Services",
+        "Training Programs"
+      ]
+    },
+    {
+      "type": "Course",
+      "name": "Embedded RFID/NFC Bare-Metal Development",
+      "description": "Learn to develop RFID/NFC firmware applications, including drivers, communication libraries, and cloud-connected desktop applications.",
+      "courseLink": "https://study.embeddedexpert.io/p/nfc-bare-metal",
+      "category": "Intermediate"
+    },
+    {
+      "type": "FAQ",
+      "questions": [
+        {
+          "question": "What services do you offer?",
+          "answer": "We specialize in embedded systems development, consulting, and training."
+        },
+        {
+          "question": "Where are you located?",
+          "answer": "We are based in XYZ City, and serve clients globally."
+        },
+        {
+          "question": "How can I contact you?",
+          "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io."
+        }
+      ]
+    },
+    {
+      "type": "Resource",
+      "id": 1,
+      "title": "Realtime Operating Systems Proficiency Test",
+      "description": "Prepare comprehensively for Embedded Software Engineer roles with our RTOS proficiency test.",
+      "previewLink": "https://embeddedexpert.io/front/images/assets/images/resources/RTOS-ProficiencyTest.pdf"
+    },
+    {
+      "type": "Review",
+      "reviews": [
+        {
+          "id": 1,
+          "review": "Israel is a great instructor. Every step is explained not only what to do but why. I would recommend this course over any other.",
+          "course": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+          "reviewer": "Jeff R."
+        },
+        {
+          "id": 2,
+          "review": "Problem-solving is the focus, not just syntax. Very good start to this course.",
+          "course": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+          "reviewer": "Abigail J."
+        }
+      ]
+    },
+    {
+      "type": "Technology",
+      "technologies": [
+        "TensorFlow Lite",
+        "STM-32 IDE",
+        "MQTT",
+        "IBM Watson IoT",
+        "Google Cloud",
+        "ARM KEIL",
+        "CMSIS"
+      ]
+    },
+    {
+      "type": "Testimonial",
+      "testimonials": [
+        {
+          "id": 1,
+          "testimonial": "The courses are excellent and have helped me gain valuable skills and secure a freelancing business.",
+          "name": "Simon Morrison",
+          "designation": "Freelance Firmware Developer & Consultant",
+          "country": "Canada"
+        },
+        {
+          "id": 2,
+          "testimonial": "Thanks to Israel's course, I discovered my passion for STM32 microcontrollers.",
+          "name": "Evans Honu",
+          "designation": "Robotics Hardware Design Engineer",
+          "country": "Ghana"
+        }
+      ]
+    }
+  ]
+}

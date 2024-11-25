@@ -1,44 +1,10 @@
 {
   "companyName": "Embedded Expert",
   "about": "The Ultimate Platform for Embedded Systems Career Development",
-  "technologies": [
-    "TensorFlow Lite",
-    "STM-32 IDE",
-    "STM-32",
-    "TouchGFX",
-    "MQTT",
-    "IBM Watson IoT",
-    "Google Cloud",
-    "Microsoft Azure IoT",
-    "AWS IoT",
-    "Amazon RTOS",
-    "GNU",
-    "Bluetooth",
-    "ARM KEIL",
-    "CMSIS",
-    "LoRa",
-    "USB",
-    "4G/LTE",
-    "NFC"
-  ],
 
   "services": [
     "Embedded Systems Development",
     "Consulting Services",
     "Training Programs"
-  ],
-  "faq": [
-    {
-      "question": "What services do you offer?",
-      "answer": "We specialize in embedded systems development, consulting, and training."
-    },
-    {
-      "question": "Where are you located?",
-      "answer": "We are based in XYZ City, and serve clients globally."
-    },
-    {
-      "question": "How can I contact you?",
-      "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io."
-    }
   ]
 }

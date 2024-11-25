@@ -1,99 +1,87 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-import CompanyData from "@/data/CompanyData.json"; // Ensure JSON path is correct
+import { OpenAI } from "openai";
+
+// Import your JSON data
+import jsonData from "@/data/data.json";
 
 // Initialize OpenAI API client
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || "error on API Key", // Fallback for TypeScript
+  apiKey: process.env.OPENAI_API_KEY || "",
 });
 
-// Define data structures for FAQ and Company Data
-type FAQ = {
-  question: string;
-  answer: string;
+// Filtering function to narrow down relevant data
+const filterData = (query: string, data: any) => {
+  const results = [];
+  for (const category in data) {
+    results.push(
+      ...data[category].filter((item: any) =>
+        JSON.stringify(item).toLowerCase().includes(query.toLowerCase())
+      )
+    );
+  }
+  return results;
 };
 
-type CompanyDataType = {
-  companyName: string;
-  about: string;
-  services: string[];
-  faq: FAQ[];
-};
-
-// Type guard for HTTP POST method
-const isPostMethod = (req: NextApiRequest): boolean => req.method === "POST";
-
-// Main handler function for the API endpoint
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  // Check if request method is POST
-  if (!isPostMethod(req)) {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
-  // Extract user message from request body
-  const { message } = req.body;
-
-  if (!message) {
-    return res.status(400).json({ error: "Message is required." });
-  }
-
-  // Check if the user's question matches an FAQ entry
-  const companyData = CompanyData as CompanyDataType;
-  const faqMatch = companyData.faq.find((faq) =>
-    message.toLowerCase().includes(faq.question.toLowerCase())
-  );
-
-  // Respond with FAQ answer if found
-  if (faqMatch) {
-    return res.status(200).json({ reply: faqMatch.answer });
-  }
-
-  // Define messages array strictly according to expected types
-  const messages: { role: 'system' | 'user' | 'assistant'; content: string }[] = [
-    {
-      role: "system",
-      content: `You are a helpful assistant for a company called ${companyData.companyName}. Here is some information about the company:
-      - About: ${companyData.about}
-      - Services: ${companyData.services.join(", ")}`,
-    },
-    {
-      role: "user",
-      content: message,
-    },
-  ];
-
+// Main handler function
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    // Send prompt to OpenAI and retrieve response
-    const completion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo", // Chat model endpoint
-      messages,
+    if (req.method !== "POST") {
+      return res.status(405).json({ error: "Method not allowed" });
+    }
+
+    const { message } = req.body || {};
+    if (!message || typeof message !== "string") {
+      return res.status(400).json({ error: "A valid message is required." });
+    }
+
+    // Filter data based on user query
+    const filteredResults = filterData(message, jsonData);
+
+    // If relevant results are found, pass them to GPT
+    if (filteredResults.length > 0) {
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4", // Use GPT-4 for better contextual understanding
+        messages: [
+          {
+            role: "system",
+            content: `You are an assistant that answers questions based on the following JSON data: ${JSON.stringify(
+              filteredResults
+            )}. If no answer is found in this data, say: "I couldn't find anything relevant in the provided data."`,
+          },
+          { role: "user", content: message },
+        ],
+        max_tokens: 1000,
+      });
+
+      const reply =
+        completion.choices?.[0]?.message?.content?.trim() ||
+        "I couldn't find an answer in the provided data.";
+
+      return res.status(200).json({ reply });
+    }
+
+    // If no match is found, fallback to OpenAI's general knowledge
+    const fallbackCompletion = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [
+        {
+          role: "system",
+          content: `You are an assistant with no additional context. Answer questions using only your general knowledge.`,
+        },
+        { role: "user", content: message },
+      ],
       max_tokens: 1000,
     });
 
-    const reply = completion.choices?.[0]?.message?.content?.trim() || "";
+    const fallbackReply =
+      fallbackCompletion.choices?.[0]?.message?.content?.trim() ||
+      "Sorry, I couldn't find an answer to your question.";
 
-    // Check if the AI response is generic or unrelated
-    const irrelevantResponses = [
-      "I'm sorry, I couldn't find an answer.",
-      "I'm not sure about that.",
-      "I don't have enough information."
-    ];
-
-    // If response is irrelevant or empty, suggest contacting support
-    if (!reply || irrelevantResponses.some((phrase) => reply.includes(phrase))) {
-      return res.status(200).json({
-        reply: `It seems your question is outside of our available information. Please contact our support team at support@company.com for more assistance.`,
-      });
-    }
-
-    // Otherwise, respond with the AI-generated reply
-    res.status(200).json({ reply });
-
+    return res.status(200).json({ reply: fallbackReply });
   } catch (error) {
-    console.error("OpenAI API error:", error);
-    res.status(500).json({ error: "An error occurred while processing your request." });
+    console.error("Error:", error);
+    return res
+      .status(500)
+      .json({ error: "An error occurred while processing your request." });
   }
 }
