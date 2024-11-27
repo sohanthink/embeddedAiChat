@@ -33,25 +33,32 @@
     },
     {
       "type": "Course",
-      "name": "Embedded RFID/NFC Bare-Metal Development",
-      "description": "Learn to develop RFID/NFC firmware applications, including drivers, communication libraries, and cloud-connected desktop applications.",
-      "courseLink": "https://study.embeddedexpert.io/p/nfc-bare-metal",
-      "category": "Intermediate"
+      "courses": [
+        {
+          "name": "Embedded RFID/NFC Bare-Metal Development",
+          "description": "Are you interested in learning how to develop RFID/NFC firmware applications from scratch? NFC stands for Near Field Communication. This is how we do things like wireless payment cards, subway cards, bus cards etc. So if you are interested in learning how to develop systems such these then take a look at our Embedded NFC Complete System Development pack. This pack will take you from knowing nothing about RFID/NFC to building a complete NFC system that includes a robust firmware and modern desktop application with cloud connectivity. This is how we are going to accomplish that. The pack is made up of two courses. The first course, Embedded RFID/NFC Bare- Metal Development can be broadly divided into a theoretical part and a practical part. Embedded RFID/NFC Bare- Metal Development In the theoretical part we focus on the following: Theoretical Part Understanding RFID and its working principles Understanding the protocols and architecture of RFID Understanding the standards and regulations around RFID Understanding the working principles of Near Field Communication (NFC) Understanding the differences between RFID and NFC Understanding the various NFC card types and their merits Understanding the memory organisation and access conditions of MIFARE cards Practical Part In the practical part we focus on the following: Developing bare-metal drivers for interfacing the MIFARE MFRC522 NFC chips with the STM32 microcontroller Developing a library for handling communications between NFC cards and readers Developing a firmware application for controlling devices and triggering events using NFC cards and tags. The Second course, NFC Desktop Application focuses on developing a modern desktop application for receiving NFC card data and storing the data in the cloud. NFC Desktop Application Development Key sections in this course include: Python Essential Training This section provides practical python essential training for embedded developers. This section is for developers who are not familiar with the python programming language and those who want to brush up on their python development skills. Python GUI Development with Kivy This section deals with developing modern GUI desktop application using python and the Kivy framework. In this section we learn how develop complete, packaged, and installable applications from scratch. We shall apply these skills later on to develop the front end of nfc system. Firebase Realtime Database and Authentication In this section we shall integrate user authentication and a realtime database to store the card information in a cloud database. Developing the NFC Desktop Application In this final section, we shall apply all that we learned do develop the NFC desktop application. As always, no copy/paste. We write each line code from scratch. Frequently Asked Questions When does the course start and finish? The course starts now and never ends! It is a completely self-paced online course - you decide when you start and when you finish. How long do I have access to the course? How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own. What if I am unhappy with the course? We would never want you to be unhappy! If you are unsatisfied with your purchase, contact us in the first 30 days and we will give you a full refund. Do I get a certificate? Yes, after a successful completion of the course.",
+          "course-link": "https://study.embeddedexpert.io/p/nfc-bare-metal",
+          "category": "Intermediate"
+        }
+      ]
     },
     {
       "type": "FAQ",
       "questions": [
         {
           "question": "What services do you offer?",
-          "answer": "We specialize in embedded systems development, consulting, and training."
+          "answer": "We specialize in embedded systems development, consulting, and training.",
+          "tags": ["services", "training", "offer"]
         },
         {
           "question": "Where are you located?",
-          "answer": "We are based in XYZ City, and serve clients globally."
+          "answer": "We are based in XYZ City, and serve clients globally.",
+          "tags": ["location", "XYZ City", "area"]
         },
         {
           "question": "How can I contact you?",
-          "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io."
+          "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io.",
+          "tags": ["contact", "reach us", "email"]
         }
       ]
     },
@@ -69,13 +76,15 @@
           "id": 1,
           "review": "Israel is a great instructor. Every step is explained not only what to do but why. I would recommend this course over any other.",
           "course": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
-          "reviewer": "Jeff R."
+          "reviewer": "Jeff R.",
+          "tags": ["Embedded Systems review", "review", "course review"]
         },
         {
           "id": 2,
           "review": "Problem-solving is the focus, not just syntax. Very good start to this course.",
           "course": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
-          "reviewer": "Abigail J."
+          "reviewer": "Abigail J.",
+          "tags": ["Embedded Systems review", "review", "course review"]
         }
       ]
     },

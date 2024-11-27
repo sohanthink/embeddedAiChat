@@ -39,37 +39,32 @@ export default function ChatBox() {
 
   const sendMessage = async () => {
     if (!userInput.trim()) return;
-
+  
     const userMessage: Message = { role: "user", content: userInput };
-    const newMessages = [...messages, userMessage];
-    setMessages(newMessages);
+    setMessages((prev) => [...prev, userMessage]);
     setUserInput("");
-    setLoading(true); // Start loading
-
+    setLoading(true);
+  
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),
       });
-
+  
       if (!response.ok) throw new Error("Failed to fetch response");
-
-      const data = await response.json();
-      const assistantMessage: Message = {
-        role: "assistant",
-        content: data.reply,
-      };
-      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
+  
+      const { reply } = await response.json();
+      setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (error) {
-      console.error("Error sending message:", error);
-      const errorMessage: Message = {
-        role: "assistant",
-        content: "Sorry, I couldn't process your request. Please try again.",
-      };
-      setMessages((prevMessages) => [...prevMessages, errorMessage]);
+      console.error(error);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "An error occurred. Please try again." },
+      ]);
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false);
+      messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
