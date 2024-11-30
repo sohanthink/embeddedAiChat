@@ -47,7 +47,7 @@ const filterData = (query: string, data: any[]) => {
 
   // Fuzzy matching with Fuse.js
   const fuse = new Fuse(flatData, {
-    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "title", "name", "about", "services", "description", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review",],
+    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review"],
     threshold: 0.7,
     distance: 200,
     shouldSort: true,
@@ -59,7 +59,7 @@ const filterData = (query: string, data: any[]) => {
   // Manual fallback
   if (results.length === 0) {
     const manualMatch = flatData.filter((item) =>
-      ["question", "tags", "description", "about", "name", "title", "courses", "reviews", "review"].some((key) =>
+      ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review"].some((key) =>
         item[key]?.toLowerCase().includes(processedQuery)
       )
     );
@@ -83,42 +83,52 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    // Step 1: Search the JSON data
-    const filteredResults = filterData(message, jsonData.data);
-    console.log('====================================');
-    console.log("filteredResults", filteredResults);
-    console.log('====================================');
-    // Step 2: If relevant results found, format them for GPT
-    if (filteredResults.length > 0) {
-      const context = filteredResults.map((item) => `- ${item.question || item.title}: ${item.answer || item.description}`).join("\n");
+      // Step 1: Search the JSON data
+      const filteredResults = filterData(message, jsonData.data);
+      console.log('====================================');
+      console.log("Filtered Results:", filteredResults);
+      console.log('====================================');
 
-      const completion = await openai.chat.completions.create({
-        model: "gpt-4",
-        messages: [
-          { role: "system", content: `You are a helpful assistant that answers questions based on the following context:\n${context}` },
-          { role: "user", content: message },
-        ],
-        max_tokens: 1000,
+      // Step 2: Format context dynamically for GPT
+      if (filteredResults.length > 0) {
+          const context = filteredResults.map((item) => {
+              if (item.question) return `Q: ${item.question}\nA: ${item.answer}`;
+              if (item.title) return `Resource: ${item.title}\nDescription: ${item.description}\nReason: ${item.reason}`;
+              if (item.course) return `Course: ${item.course}\nReview: ${item.review}`;
+              if (item.name && item.testimonial) return `Testimonial by ${item.name}: "${item.testimonial}"`;
+              return `Info: ${item.description || item.about || ''}`;
+          }).join("\n\n");
+          console.log('====================================');
+          console.log(context);
+          console.log('====================================');
+          // Call OpenAI API with formatted context
+          const completion = await openai.chat.completions.create({
+              model: "gpt-4",
+              messages: [
+                  { role: "system", content: `You are a helpful assistant. Use the following context to answer questions:\n\n${context}` },
+                  { role: "user", content: message },
+              ],
+              max_tokens: 1000,
+          });
+
+          const reply = completion.choices[0]?.message?.content || "I couldn't find a detailed answer.";
+          return res.status(200).json({ reply });
+      }
+
+      // Step 3: Fallback to general GPT-4 knowledge if no results
+      const fallback = await openai.chat.completions.create({
+          model: "gpt-4",
+          messages: [
+              { role: "system", content: "You are a helpful assistant that answers questions based on your general knowledge." },
+              { role: "user", content: message },
+          ],
+          max_tokens: 1000,
       });
 
-      const reply = completion.choices[0]?.message?.content || "I couldn't find a detailed answer.";
-      return res.status(200).json({ reply });
-    }
-
-    // Step 3: If no results found, use GPT-4 fallback
-    const fallback = await openai.chat.completions.create({
-      model: "gpt-4",
-      messages: [
-        { role: "system", content: "You are a helpful assistant that answers questions based on your general knowledge." },
-        { role: "user", content: message },
-      ],
-      max_tokens: 1000,
-    });
-
-    const fallbackReply = fallback.choices[0]?.message?.content || "I couldn't find an answer to your question.";
-    return res.status(200).json({ reply: fallbackReply });
+      const fallbackReply = fallback.choices[0]?.message?.content || "I couldn't find an answer to your question.";
+      return res.status(200).json({ reply: fallbackReply });
   } catch (error) {
-    console.error("Error processing request:", error);
-    return res.status(500).json({ error: "An error occurred while processing your request." });
+      console.error("Error processing request:", error);
+      return res.status(500).json({ error: "An error occurred while processing your request." });
   }
 }
