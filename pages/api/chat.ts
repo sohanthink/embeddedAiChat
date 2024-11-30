@@ -14,6 +14,8 @@ const flattenData = (data: any[]) => {
   data.forEach((item) => {
     if (item.questions) {
       flatData.push(...item.questions); // Extract 'questions' from FAQ
+    } else if (item.courses) {
+      flatData.push(...item.courses); // Extract 'courses'
     } else if (item.reasons) {
       flatData.push(...item.reasons); // Extract 'reasons' from AffiliatePartner
     } else if (item.testimonials) {
@@ -47,7 +49,7 @@ const filterData = (query: string, data: any[]) => {
 
   // Fuzzy matching with Fuse.js
   const fuse = new Fuse(flatData, {
-    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review"],
+    keys: ["question", "answer", "tags", "title", "description", "reasons", "name", "about", "services", "category", "technologies", "testimonial", "designation", "courses", "reviews", "review"],
     threshold: 0.7,
     distance: 200,
     shouldSort: true,
@@ -59,7 +61,7 @@ const filterData = (query: string, data: any[]) => {
   // Manual fallback
   if (results.length === 0) {
     const manualMatch = flatData.filter((item) =>
-      ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review"].some((key) =>
+      ["question", "answer", "tags", "title", "description", "reasons", "name", "about", "services", "category", "technologies", "testimonial", "designation", "courses", "reviews", "review"].some((key) =>
         item[key]?.toLowerCase().includes(processedQuery)
       )
     );
@@ -94,6 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const context = filteredResults.map((item) => {
               if (item.question) return `Q: ${item.question}\nA: ${item.answer}`;
               if (item.title) return `Resource: ${item.title}\nDescription: ${item.description}\nReason: ${item.reason}`;
+              if (item.name && item.description && item.category) return `Course name: ${item.name}\nDescription: ${item.description}`;
               if (item.course) return `Course: ${item.course}\nReview: ${item.review}`;
               if (item.name && item.testimonial) return `Testimonial by ${item.name}: "${item.testimonial}"`;
               return `Info: ${item.description || item.about || ''}`;
