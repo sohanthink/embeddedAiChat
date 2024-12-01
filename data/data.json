@@ -23,7 +23,7 @@
     },
     {
       "type": "CompanyInfo",
-      "name": "Embedded Expert",
+      "name": "EmbeddedExpert.io",
       "about": "The Ultimate Platform for Embedded Systems Career Development",
       "services": [
         "Embedded Systems Development",
@@ -32,33 +32,32 @@
       ]
     },
     {
-      "type": "Course",
-      "courses": [
-        {
-          "name": "Embedded RFID/NFC Bare-Metal Development",
-          "description": "Are you interested in learning how to develop RFID/NFC firmware applications from scratch? NFC stands for Near Field Communication. This is how we do things like wireless payment cards, subway cards, bus cards etc. So if you are interested in learning how to develop systems such these then take a look at our Embedded NFC Complete System Development pack. This pack will take you from knowing nothing about RFID/NFC to building a complete NFC system that includes a robust firmware and modern desktop application with cloud connectivity. This is how we are going to accomplish that. The pack is made up of two courses. The first course, Embedded RFID/NFC Bare- Metal Development can be broadly divided into a theoretical part and a practical part. Embedded RFID/NFC Bare- Metal Development In the theoretical part we focus on the following: Theoretical Part Understanding RFID and its working principles Understanding the protocols and architecture of RFID Understanding the standards and regulations around RFID Understanding the working principles of Near Field Communication (NFC) Understanding the differences between RFID and NFC Understanding the various NFC card types and their merits Understanding the memory organisation and access conditions of MIFARE cards Practical Part In the practical part we focus on the following: Developing bare-metal drivers for interfacing the MIFARE MFRC522 NFC chips with the STM32 microcontroller Developing a library for handling communications between NFC cards and readers Developing a firmware application for controlling devices and triggering events using NFC cards and tags. The Second course, NFC Desktop Application focuses on developing a modern desktop application for receiving NFC card data and storing the data in the cloud. NFC Desktop Application Development Key sections in this course include: Python Essential Training This section provides practical python essential training for embedded developers. This section is for developers who are not familiar with the python programming language and those who want to brush up on their python development skills. Python GUI Development with Kivy This section deals with developing modern GUI desktop application using python and the Kivy framework. In this section we learn how develop complete, packaged, and installable applications from scratch. We shall apply these skills later on to develop the front end of nfc system. Firebase Realtime Database and Authentication In this section we shall integrate user authentication and a realtime database to store the card information in a cloud database. Developing the NFC Desktop Application In this final section, we shall apply all that we learned do develop the NFC desktop application. As always, no copy/paste. We write each line code from scratch. Frequently Asked Questions When does the course start and finish? The course starts now and never ends! It is a completely self-paced online course - you decide when you start and when you finish. How long do I have access to the course? How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own. What if I am unhappy with the course? We would never want you to be unhappy! If you are unsatisfied with your purchase, contact us in the first 30 days and we will give you a full refund. Do I get a certificate? Yes, after a successful completion of the course.",
-          "course-link": "https://study.embeddedexpert.io/p/nfc-bare-metal",
-          "category": "Intermediate"
-        }
-      ]
-    },
-    {
       "type": "FAQ",
       "questions": [
         {
-          "question": "What services do you offer?",
-          "answer": "We specialize in embedded systems development, consulting, and training.",
-          "tags": ["services", "training", "offer"]
+          "question": "What is EmbeddedExpert.io?",
+          "answer": "EmbeddedExpert.io is an online platform offering a wide range of courses focused on embedded systems development, consulting services, and training programs.",
+          "tags": ["about", "platform", "courses"]
         },
         {
-          "question": "Where are you located?",
-          "answer": "We are based in XYZ City, and serve clients globally.",
-          "tags": ["location", "XYZ City", "area"]
+          "question": "How can I enroll in a course?",
+          "answer": "You can enroll in a course by visiting our website, selecting the course you are interested in, and following the enrollment instructions provided.",
+          "tags": ["enrollment", "courses", "how to"]
         },
         {
-          "question": "How can I contact you?",
-          "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io.",
-          "tags": ["contact", "reach us", "email"]
+          "question": "Do you offer certificates for course completion?",
+          "answer": "Yes, we offer certificates upon successful completion of our courses.",
+          "tags": ["certificates", "course completion", "credentials"]
+        },
+        {
+          "question": "What payment methods are accepted?",
+          "answer": "We accept various payment methods including credit/debit cards, PayPal, and other online payment options.",
+          "tags": ["payment", "methods", "options"]
+        },
+        {
+          "question": "Is there a refund policy?",
+          "answer": "Yes, we offer a 30-day refund policy if you are not satisfied with the course.",
+          "tags": ["refund", "policy", "satisfaction"]
         }
       ]
     },
@@ -67,8 +66,15 @@
       "id": 1,
       "title": "Realtime Operating Systems Proficiency Test",
       "description": "Prepare comprehensively for Embedded Software Engineer roles with our RTOS proficiency test.",
-      "previewLink": "https://embeddedexpert.io/front/images/assets/images/resources/RTOS-ProficiencyTest.pdf"
+      "previewLink": "https://embeddedexpert.io/front/images/assets/images/resources/RTOS-ProficiencyTest.pdf",
+      "tag": [
+        "RTOS",
+        "proficiency test",
+        "embedded software engineer",
+        "resources"
+      ]
     },
+
     {
       "type": "Review",
       "reviews": [
@@ -81,9 +87,66 @@
         },
         {
           "id": 2,
-          "review": "Problem-solving is the focus, not just syntax. Very good start to this course.",
-          "course": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
-          "reviewer": "Abigail J.",
+          "review": "I thought this was going to be a course that followed another book, but when he directed us to the user/dev documentation to find answers, I saw this was something special. Problem-solving should always be at the focus of any programming course, even above syntaxt and technology. Very good start to this course.",
+          "course_name": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+          "course_link": "https://study.embeddedexpert.io/p/modern-bare-metal-embedded-c-programming-from-ground-up111",
+          "name": "Abigail J.",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 3,
+          "review": "Explanation is really good but could go deeper into some stuff. Especially for beginners like me it is hard to understand some topics which I never heard before. But like many courses they don´t share their slides which is really a shame since udemy also blocked the screenshot function it is really hard and unnecessary complex to take notes.",
+          "course_name": "ARM Assembly Language From Ground Up™ 1",
+          "course_link": "https://study.embeddedexpert.io/p/arm-assem-1",
+          "name": "Pascal W.",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 4,
+          "review": "This course is amazing. It takes you from absolute beginner to expert in programming STM32 MCU. It taught you all the basic especially reading the reference manual. I highly recommend the instructor if you would like to learn about embedded systems.",
+          "course_name": "Embedded Systems Bare-Metal Programming Ground Up™ (STM32)",
+          "course_link": "https://study.embeddedexpert.io/p/modern-bare-metal-embedded-c-programming-from-ground-up111",
+          "name": "Aisha A.",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 5,
+          "review": "Very enlightening and eye opening .I always wondered about how different logic gates come together to create a microarchitecture and then and instruction set and then and then a full fledged architecture like ARM . This course has been able to explain all of that. Looking forward to the rest of the course.",
+          "course_name": "ARM Assembly Language From Ground Up™ 1",
+          "course_link": "https://study.embeddedexpert.io/p/arm-assem-1",
+          "name": "Marvin",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 6,
+          "review": "The course is well structured and detailed. It's good for beginners and advanced students as the examples are all in assembly language which is not offered by other instructors. I am waiting for more examples to be added and i really enjoyed this course.",
+          "course_name": "ARM Assembly Language From Ground Up™ 1",
+          "course_link": "https://study.embeddedexpert.io/p/arm-assem-1",
+          "name": "Nishad P.",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 7,
+          "review": "The course is explained in a friendly manner, the instructor tells what each line of code does and demonstrates the result code which is really satisfying, it would be also great if he could had shown the use of usefull API's like CMSIS-RTOS.",
+          "course_name": "Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 1",
+          "course_link": "https://study.embeddedexpert.io/p/rtos1",
+          "name": "Abraham R.",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 8,
+          "review": "Excellent course. I am an embedded systems lecturer at local college and I must say, I found the content very useful and well presented. I recommend this to any embedded systems student.",
+          "course_name": "Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 1",
+          "course_link": "https://study.embeddedexpert.io/p/rtos1",
+          "name": "James K.",
+          "tags": ["Embedded Systems review", "review", "course review"]
+        },
+        {
+          "id": 9,
+          "review": "Well taught. The course goes deep into key areas like the design of scheduling algorithms and even explaining the algorithms using animations, this makes the learning process very easy.",
+          "course_name": "Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 1",
+          "course_link": "https://study.embeddedexpert.io/p/rtos1",
+          "name": "Limd",
           "tags": ["Embedded Systems review", "review", "course review"]
         }
       ]
@@ -93,11 +156,22 @@
       "technologies": [
         "TensorFlow Lite",
         "STM-32 IDE",
+        "STM-32",
+        "TouchGFX",
         "MQTT",
         "IBM Watson IoT",
         "Google Cloud",
+        "Microsoft Azure IoT",
+        "AWS IoT",
+        "Amazon RTOS",
+        "GNU",
+        "Bluetooth",
         "ARM KEIL",
-        "CMSIS"
+        "CMSIS",
+        "LoRa",
+        "USB",
+        "4G/LTE",
+        "NFC"
       ]
     },
     {
@@ -108,14 +182,72 @@
           "testimonial": "The courses are excellent and have helped me gain valuable skills and secure a freelancing business.",
           "name": "Simon Morrison",
           "designation": "Freelance Firmware Developer & Consultant",
-          "country": "Canada"
+          "country": "Canada",
+          "tags": ["testimonial", "course testimonial", "course review"]
         },
         {
           "id": 2,
-          "testimonial": "Thanks to Israel's course, I discovered my passion for STM32 microcontrollers.",
+          "testimonial": "All the course I took are great! In all of them I learned new and useful things that I use in my personal projects, and also they helped me to achieve a job as a software embedded engineer. Also, I'm still taking them to learn new things and improve my skills in embedded systems. I totally recommend these courses! And thank you to the Israel to share his knowledge to everyone!",
+          "name": "Ricardo Escarcega",
+          "designation": "Embedded SoftwareEngineer",
+          "country": "Mexico",
+          "tags": ["testimonial", "course testimonial", "course review"]
+        },
+        {
+          "id": 3,
+          "testimonial": "The material offered by your courses is one of the most systematic and easily understandable for beginners.I would also like to note that only your courses cover a large range of topics from Embedded Software Development and Embedded Systems itself. Not so long ago, I switched to using your courses through your platform and I hope it will develop. About me , my name is Ivan and I am a Design and Application Engineer from the Mechanical and Electrical field of Marine HVAC system, I am from Russia, I am 37 years old. I have a higher education in the field of Operation and Maintenance of Motor transport (Automotive). After many years of experience as an engineer in my specialty, I came across the fact that it became necessary to study Embedded systems and their programming, and so I found the content I needed in your courses.I hope you will develop and graduate new courses. Personally, I would really like to see topics dedicated to communication buses - CAN, CAN FD, LIN, RS-485, FlexRay and so on.",
+          "name": "Ivan",
+          "designation": "Design and Application Engineer",
+          "country": "Russia",
+          "tags": ["testimonial", "course testimonial", "course review"]
+        },
+        {
+          "id": 4,
+          "testimonial": "I have done several of the EmbeddedExpertIO courses. I have enjoyed all of them and gained valuable additional knowledge and skills. Has helped me to obtain more work in my freelancing business.",
+          "name": "Simon Morrison",
+          "designation": "Freelance Firmware Developer & Consultant",
+          "country": "Canada",
+          "tags": ["testimonial", "course testimonial", "course review"]
+        },
+        {
+          "id": 5,
+          "testimonial": "Thanks to Israel's course, I discovered my passion for STM32 microcontrollers and have found true love in it. I previously only knew how to design boards with less powerful controllers. Now, I can incorporate STM32 controllers into my custom boards and program them. I am now on the path to becoming a complete embedded software and hardware engineer, thanks to the ongoing courses. I am grateful for the opportunity provided by Israel to enhance my skills and become a better version of myself.",
           "name": "Evans Honu",
           "designation": "Robotics Hardware Design Engineer",
-          "country": "Ghana"
+          "country": "Ghana",
+          "tags": ["testimonial", "course testimonial", "course review"]
+        }
+      ]
+    },
+
+    {
+      "type": "Course",
+      "courses": [
+        {
+          "name": "Embedded RFID/NFC Bare-Metal Development",
+          "description": "Are you interested in learning how to develop RFID/NFC firmware applications from scratch? NFC stands for Near Field Communication. This is how we do things like wireless payment cards, subway cards, bus cards etc. So if you are interested in learning how to develop systems such these then take a look at our Embedded NFC Complete System Development pack. This pack will take you from knowing nothing about RFID/NFC to building a complete NFC system that includes a robust firmware and modern desktop application with cloud connectivity. This is how we are going to accomplish that. The pack is made up of two courses. The first course, Embedded RFID/NFC Bare- Metal Development can be broadly divided into a theoretical part and a practical part. Embedded RFID/NFC Bare- Metal Development In the theoretical part we focus on the following: Theoretical Part Understanding RFID and its working principles Understanding the protocols and architecture of RFID Understanding the standards and regulations around RFID Understanding the working principles of Near Field Communication (NFC) Understanding the differences between RFID and NFC Understanding the various NFC card types and their merits Understanding the memory organisation and access conditions of MIFARE cards Practical Part In the practical part we focus on the following: Developing bare-metal drivers for interfacing the MIFARE MFRC522 NFC chips with the STM32 microcontroller Developing a library for handling communications between NFC cards and readers Developing a firmware application for controlling devices and triggering events using NFC cards and tags. The Second course, NFC Desktop Application focuses on developing a modern desktop application for receiving NFC card data and storing the data in the cloud. NFC Desktop Application Development Key sections in this course include: Python Essential Training This section provides practical python essential training for embedded developers. This section is for developers who are not familiar with the python programming language and those who want to brush up on their python development skills. Python GUI Development with Kivy This section deals with developing modern GUI desktop application using python and the Kivy framework. In this section we learn how develop complete, packaged, and installable applications from scratch. We shall apply these skills later on to develop the front end of nfc system. Firebase Realtime Database and Authentication In this section we shall integrate user authentication and a realtime database to store the card information in a cloud database. Developing the NFC Desktop Application In this final section, we shall apply all that we learned do develop the NFC desktop application. As always, no copy/paste. We write each line code from scratch.",
+          "course-link": "https://study.embeddedexpert.io/p/nfc-bare-metal",
+          "category": "Intermediate",
+          "tags": [
+            "RFID/NFC",
+            "Intermediate",
+            "Embedded Systems",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "Modern Bare-Metal Embedded C++ Programming from Ground Up™",
+          "description": "Welcome to the Modern Embedded C++ Bare Metal course. This is a practical programming course on embedded systems programming using the C++ programming language. Key features of C++ such as template programming and object-oriented programming can greatly improve embedded software portability, in recent years this has made C++ very attractive to embedded developers. The goal of this course is to teach you how to navigate the microcontroller reference manual and datasheet to extract the right information to professionally build peripheral drivers and firmware. To achieve this goal, no libraries are used in this course, purely bare-metal Embedded-C++ and register manipulations. By the end of this course you will be able to write drivers for peripherals like ADC, UART, PWM, GPIO, TIMER, I2C, SPI, etc. You will also master the ARM architecture and how to build professional embedded firmware for ARM processors. Furthermore, you will master C++ key features like Object-Oriented methods, Template Programming, and optimization.",
+          "course-link": "https://study.embeddedexpert.io/p/nfc-bare-metal",
+          "category": "Intermediate",
+          "tags": [
+            "RFID/NFC",
+            "Intermediate",
+            "Embedded Systems",
+            "courses",
+            "course"
+          ]
         }
       ]
     }
