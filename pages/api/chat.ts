@@ -96,7 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const context = filteredResults.map((item) => {
               if (item.question) return `Q: ${item.question}\nA: ${item.answer}`;
               if (item.title) return `Resource: ${item.title}\nDescription: ${item.description}\nReason: ${item.reason}`;
-              if (item.name && item.description && item.category) return `Course name: ${item.name}\nDescription: ${item.description}`;
+              if (item.name && item.description && item.category) return `with 5-6 point:  Course name: ${item.name}\nDescription:${ item.description}`;
               if (item.course) return `Course: ${item.course}\nReview: ${item.review}`;
               if (item.name && item.testimonial) return `Testimonial by ${item.name}: "${item.testimonial}"`;
               return `Info: ${item.description || item.about || ''}`;
