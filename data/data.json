@@ -58,21 +58,6 @@
           "question": "Is there a refund policy?",
           "answer": "Yes, we offer a 30-day refund policy if you are not satisfied with the course.",
           "tags": ["refund", "policy", "satisfaction"]
-        },
-        {
-          "question": "What services do you offer?",
-          "answer": "We specialize in embedded systems development, consulting, and training.",
-          "tags": ["services", "embedded systems", "development", "consulting", "training"]
-        },
-        {
-          "question": "Where are you located?",
-          "answer": "We are based in XYZ City, and serve clients globally.",
-          "tags": ["location", "headquarters", "global", "address"]
-        },
-        {
-          "question": "How can I contact you?",
-          "answer": "You can reach us through our contact form on our website or at contact@embeddedexpert.io.",
-          "tags": ["contact", "reach out", "email"]
         }
       ]
     },

@@ -36,8 +36,6 @@ const flattenData = (data: any[]) => {
 const filterData = (query: string, data: any[]) => {
   const flatData = flattenData(data);
 
-  console.log("Flat Data for Search:", flatData);
-
   // Preprocess query
   const preprocessQuery = (query: string) => {
     return query
@@ -87,28 +85,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
       // Step 1: Search the JSON data
       const filteredResults = filterData(message, jsonData.data);
-      console.log('====================================');
-      console.log("Filtered Results:", filteredResults);
-      console.log('====================================');
 
       // Step 2: Format context dynamically for GPT
       if (filteredResults.length > 0) {
           const context = filteredResults.map((item) => {
               if (item.question) return `Q: ${item.question}\nA: ${item.answer}`;
               if (item.title) return `Resource: ${item.title}\nDescription: ${item.description}\nReason: ${item.reason}`;
-              if (item.name && item.description && item.category) return `with 5-6 point:  Course name: ${item.name}\nDescription:${ item.description}`;
+              if (item.name && item.description && item.category) return `Course name: ${item.name}\nDescription:${ item.description}`;
               if (item.course) return `Course: ${item.course}\nReview: ${item.review}`;
               if (item.name && item.testimonial) return `Testimonial by ${item.name}: "${item.testimonial}"`;
               return `Info: ${item.description || item.about || ''}`;
           }).join("\n\n");
           console.log('====================================');
-          console.log(context);
+          console.log(`You are a helpful assistant. ${context.includes("Course name:") ? 'Use the following course context to answer questions with 5-6 bullet point' : 'Use the following context to answer questions'} :\n\n${context}`);
           console.log('====================================');
           // Call OpenAI API with formatted context
           const completion = await openai.chat.completions.create({
               model: "gpt-4",
               messages: [
-                  { role: "system", content: `You are a helpful assistant. Use the following context to answer questions:\n\n${context}` },
+                  { role: "system", content: `You are a helpful assistant. ${context.includes("Course name:") ? 'Use the following course context to answer questions with 5-6 bullet point' : 'Use the following context to answer questions'} :\n\n${context}` },
                   { role: "user", content: message },
               ],
               max_tokens: 1000,
