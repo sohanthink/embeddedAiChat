@@ -54,7 +54,6 @@ const filterData = (query: string, data: any[]) => {
   });
 
   const results = fuse.search(processedQuery).map((result) => result.item);
-  console.log("Fuse.js Results:", results);
 
   // Manual fallback
   if (results.length === 0) {
@@ -63,7 +62,6 @@ const filterData = (query: string, data: any[]) => {
         item[key]?.toLowerCase().includes(processedQuery)
       )
     );
-    console.log("Manual Match Fallback:", manualMatch);
     return manualMatch;
   }
 
@@ -96,9 +94,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               if (item.name && item.testimonial) return `Testimonial by ${item.name}: "${item.testimonial}"`;
               return `Info: ${item.description || item.about || ''}`;
           }).join("\n\n");
-          console.log('====================================');
-          console.log(`You are a helpful assistant. ${context.includes("Course name:") ? 'Use the following course context to answer questions with 5-6 bullet point' : 'Use the following context to answer questions'} :\n\n${context}`);
-          console.log('====================================');
           // Call OpenAI API with formatted context
           const completion = await openai.chat.completions.create({
               model: "gpt-4",
@@ -108,7 +103,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               ],
               max_tokens: 1000,
           });
-
           const reply = completion.choices[0]?.message?.content || "I couldn't find a detailed answer.";
           return res.status(200).json({ reply });
       }
