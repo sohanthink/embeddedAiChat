@@ -39,21 +39,21 @@ export default function ChatBox() {
 
   const sendMessage = async () => {
     if (!userInput.trim()) return;
-  
+
     const userMessage: Message = { role: "user", content: userInput };
     setMessages((prev) => [...prev, userMessage]);
     setUserInput("");
     setLoading(true);
-  
+
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),
       });
-  
+
       if (!response.ok) throw new Error("Failed to fetch response");
-  
+
       const { reply } = await response.json();
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (error) {
@@ -100,7 +100,15 @@ export default function ChatBox() {
                   : "font-bold bg-slate-100 p-2 text-black rounded-xl rounded-tr-none"
               }`}
             >
-              {msg.content}
+              {msg.role === "assistant"
+                ? msg.content.split("\n").map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      <br />
+                      <br />
+                    </span>
+                  ))
+                : msg.content}
             </span>
           </p>
         ))}
