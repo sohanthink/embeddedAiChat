@@ -7,17 +7,20 @@
         {
           "id": 1,
           "title": "We Pay The Highest Commissions",
-          "reason": "Our commission structure is straightforward, offering 30%-40% commissions on all courses. You earn on every sale made through your referral link without worrying about creating products or handling customer service."
+          "reason": "Our commission structure is straightforward, offering 30%-40% commissions on all courses. You earn on every sale made through your referral link without worrying about creating products or handling customer service.",
+          "tags": ["reason", "partner", "affiliate"]
         },
         {
           "id": 2,
           "title": "We Offer a Wide Range of Products",
-          "reason": "Our affiliate program includes a variety of embedded systems courses, enabling affiliates to target diverse audiences effectively."
+          "reason": "Our affiliate program includes a variety of embedded systems courses, enabling affiliates to target diverse audiences effectively.",
+          "tags": ["reason", "partner", "affiliate"]
         },
         {
           "id": 3,
           "title": "Dedicated Support Team",
-          "reason": "Our affiliate team provides marketing materials, training, and support to ensure your success as an affiliate."
+          "reason": "Our affiliate team provides marketing materials, training, and support to ensure your success as an affiliate.",
+          "tags": ["reason", "partner", "affiliate"]
         }
       ]
     },
@@ -61,6 +64,7 @@
         }
       ]
     },
+
     {
       "type": "Resource",
       "id": 1,
@@ -151,6 +155,7 @@
         }
       ]
     },
+
     {
       "type": "Technology",
       "technologies": [
@@ -172,8 +177,10 @@
         "USB",
         "4G/LTE",
         "NFC"
-      ]
+      ],
+      "tags": ["Technology used", "Technology we use"]
     },
+
     {
       "type": "Testimonial",
       "testimonials": [
@@ -243,6 +250,19 @@
           "category": "Intermediate",
           "tags": [
             "RFID/NFC",
+            "Intermediate",
+            "Embedded Systems",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "Embedded Wifi Bare-Metal Development From Ground Up™",
+          "description": "This course teaches you how to develop drivers and libraries for connecting your embedded device to the internet. This course uses the STM32 microcontroller and the ESP8266 WIFI chip. The ESP8266 is a low-cost WIFI chip with a full TCP/IP stack and a microcontroller. If you do not understand what TCP/IP stack means, do not worry, by the end of this course you will understand this and much more. The course can be divided into four parts. The first part is theoretical. In this part we shall learn about some networking concepts and the fundamentals of the WIFI protocol. In the next part of the course we shall develop bare-metal drivers for interfacing the ESP8266 chip to the STM32 microcontroller. After developing our drivers for connecting the ESP8266 chip to the STM32 microcontroller we shall then go ahead and develop efficient data structures for managing communication data between the ESP8266 chip and the STM32 microcontroller. In the final part we shall combine the drivers and data structures developed in the previous parts to develop a library for connecting to the internet. We shall then go on to use the library to develop a WebServer, a Web Client as well as accomplish tasks such as storing sensor data in the cloud and so much more. Please take a look at the full course curriculum. Develop a Complete WIFI Library for ESP8266 and STM32 Microcontrollers Develop an Embedded WIFI Client for Accessing Web APIs Develop an Embedded Web Server for Controlling Hardware Remotely Develop Bare-Metal Firmware for Storing Sensor Data in the Cloud Develop Bare-Metal Drivers for Connecting ESP8266 to STM32 Microcontrollers Develop First-In-First-Out (FIFO) Data Structure for Managing Communication Data Develop Circular Buffer Data Structure for Managing Communication Data Understand the Fundamentals of the IEEE 802.11 (WIFI) Protocol Please take a look at the full course curriculum.",
+          "course-link": "https://study.embeddedexpert.io/p/embedded-wifi-bare-metal-development-from-ground-up",
+          "category": "Intermediate",
+          "tags": [
+            "Wifi Bare-Metal",
             "Intermediate",
             "Embedded Systems",
             "courses",

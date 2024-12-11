@@ -47,7 +47,7 @@ const filterData = (query: string, data: any[]) => {
 
   // Fuzzy matching with Fuse.js
   const fuse = new Fuse(flatData, {
-    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review"],
+    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review","reason", "partner", "affiliate","Technology we use","Technology used"],
     threshold: 0.7,
     distance: 200,
     shouldSort: true,
@@ -55,6 +55,7 @@ const filterData = (query: string, data: any[]) => {
 
   const results = fuse.search(processedQuery).map((result) => result.item);
   console.log("Fuse.js Results:", results);
+
 
   // Manual fallback
   if (results.length === 0) {
