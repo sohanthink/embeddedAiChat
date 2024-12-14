@@ -47,7 +47,7 @@ const filterData = (query: string, data: any[]) => {
 
   // Fuzzy matching with Fuse.js
   const fuse = new Fuse(flatData, {
-    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review","reason", "partner", "affiliate","Technology we use","Technology used"],
+    keys: ["question", "answer", "tags", "title", "description", "link", "reasons", "name", "about", "services", "courseLink", "category", "previewLink", "technologies", "testimonial", "designation", "country", "courses", "reviews", "review","reason", "partner", "affiliate","Technology we use","Technology used","instructor", "teacher", "course teacher", "course instructor","company", "about", "services", "Embedded Systems","certificates", "course completion","enrollment", "courses", "how to","payment", "methods", "options","refund", "policy", "satisfaction","course policy","resources" ],
     threshold: 0.7,
     distance: 200,
     shouldSort: true,
@@ -100,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const completion = await openai.chat.completions.create({
               model: "gpt-4",
               messages: [
-                  { role: "system", content: `You are a helpful assistant. ${context.includes("Course name:") ? 'Use the following course context to answer questions with 5-6 bullet point' : 'Use the following context to answer questions'} :\n\n${context}` },
+                  { role: "system", content: `You are a helpful assistant. ${context.includes("Course name:") ? 'Use the following course context to answer questions with 5-6 bullet points including course link' : 'Use the following context to answer questions'} :\n\n${context}` },
                   { role: "user", content: message },
               ],
               max_tokens: 1000,
