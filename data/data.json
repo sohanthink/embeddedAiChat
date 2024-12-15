@@ -327,6 +327,95 @@
             "courses",
             "course"
           ]
+        },
+        {
+          "name": "Bluetooth Low Energy (BLE) From Ground Up™",
+          "description": "Welcome to the Bluetooth Low Energy (BLE) From Ground Up™ course.\n\nThis practical Bluetooth Low Energy (BLE) course will provide you with a solid in-depth training to be able to build BLE embedded devices and use them to communicate with other smart devices and mobile phone app. This course aims to provide a solid practical understanding of Bluetooth Low Energy: the protocol, how data is organized, and the key design trade-offs that were made in the creation of the protocol.\n\nBy the end of this course you should be able to build your own BLE enabled embedded devices and give a lecture on the BLE protocol.\n\nI personally guarantee that by the end of this course you will be able to accomplish the following:\nBuild Bluetooth Low Energy (BLE) firmware for different use cases\nUnderstand the Bluetooth Low Energy (BLE) Stack\nCreate your own Services and Characteristics\nBuild Bluetooth Low Energy Embedded Devices\nGive a lecture on the Bluetooth Low Energy (BLE) Architecture\n- If you are thinking about developing a product that incorporates Bluetooth Low Energy then take this course.\n- If you are an embedded engineer who wants to create Bluetooth Low Energy (BLE) firmware then take this course.\n- If you just want to learn how to code and build BLE devices then take this course.",
+          "course-link": "https://study.embeddedexpert.io/p/bluetooth-low-energy-ble-from-ground-up_new",
+          "category": "Intermediate",
+          "tags": [
+            "BLE",
+            "(BLE) From Ground Up™",
+            "Intermediate",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "Build Your Own RealTime OS (RTOS 2) From Ground Up™ on ARM 2",
+          "description": "Welcome to the Build Your Own RealTime OS (RTOS) From Ground Up™ on ARM 2 course.\n\nThis course teaches you how to build Real-Time Operating Systems through intensive practice and theory. It starts by getting you excited through an introduction to the internals of a Real-Time Kernel on ARM Processors, which you shall implement yourself in code. Then we move on to learn all there is about Real-Time Operating Systems, their various parts, how they work and then we finally build our own Real-Time Operating System exploring different scheduling algorithms and Inter-Thread communication tools.\n\nThis course is a two part series. This is the second part of the series.\n\nAt the end of this course you should be able to build your own Real-Time Operating System from scratch, give your own lecture on Real-Time Operating Systems, be able to build a Round-Robin Scheduler, Priority Scheduler, Sporadic Scheduler, Periodic Scheduler, be able to calculate the CPU utilization of your RTOS, be able to build an OS Kernel etc. Please see the course curriculum section to find out all the amazing content awaiting you.\n\nWho is this training pack for?\n\nAnyone seeking to improve their embedded firmware development skills\nAnyone seeking to build their own Realtime Operating System (RTOS).\n\nI personally guarantee that by the end of this training pack you will be able to accomplish the following:\nBuild a Real-Time Operating System from Scratch\nBuild Round-Robin Schedulers\nBuild Cooperative Schedulers\nBuild Periodic Schedulers\nBuild First Come First Served Scheduler\nBuild Rate Monotonic Schedulers\nBuild a board support package from scratch\nCalculate the CPU Utilization of an RTOS\nUnderstand the OS Support Features of the Cortex-M Architecture\nUnderstand the Internals of an RTOS Kernel\nBe able to implement and explain popular scheduling algorithms\nBe able to give a lecture on Real-Time Operating Systems\nBe able to build Priority Schedulers\nBe able to build Sporadic Schedulers\nBe able to build Fixed Schedulers\nBe able to build Periodic Schedulers using 4 different algorithms",
+          "course-link": "https://study.embeddedexpert.io/p/rtos2",
+          "category": "Intermediate",
+          "tags": ["RTOS 2", "ARM 2", "Intermediate", "courses", "course"]
+        },
+        {
+          "name": "Deep Learning on ARM Processors - From Ground Up™",
+          "description": "We are going to embark on a very exciting journey together. We are going to learn how to build deep neural networks from scratch on our microcontrollers. We shall begin by learning the basics of deep learning with practical code showing each of the basic building blocks that end up making a giant deep neural network. All of this on our microcontroller, both training and inference. As we begin to deal with large datasets we shall start training our neural networks on our computers and then deploying the trained models on our microcontrollers. Due to the limited memory and processing power of microcontrollers we shall learn methods for quantizing our models before deploying them on our resource constrained microcontrollers without compromising the accuracy of our models. By the end of this course you will be able to build neural networks from scratch without libraries, be able to master quantization methods for deploying neural networks on microcontrollers, be able to build deep learning firmware for Handwriting Recognition, be able to use Keras, CubeMX.AI and so much more. If you are new to machine learning and deep learning, this course is for you. The course starts from the very basic building block of neural networks and teaches you how to build your own neural network using pure c code before we move on to see how to use readily available libraries. Course Content I personally guarantee that by the end of this course you will be able to accomplish the following Build Neural Networks from scratch without libraries Master quantization methods for deploying Neural Networks on microcontrollers Build a Deep Learning Firmware for Handwriting Recognition Be able to give a Lecture on Deep Learning",
+          "course-link": "https://study.embeddedexpert.io/p/deep-learning-on-arm-processors-from-ground-up",
+          "category": "Intermediate",
+          "tags": [
+            "Deep Learning",
+            "ARM Processors",
+            "Keras CubeMX.AI",
+            "Intermediate",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "Embedded Ethernet Programming with HAL",
+          "description": "This course is the intermediate level course of a learning path teaching you how to write/configure drivers for the Ethernet peripheral as well as write embedded Ethernet firmware for different networking protocols such as http, dhcp etc.\n\nSo with that understood, let me tell you…:\nWhat make this course different from the beginner course ?\n\nIn this course we write all the Ethernet drivers ourselves using the the STM32 HAL APIs. Unlike the beginner course, in this course we also implement the Ethernet interface files linking our Ethernet module to the LwIP library ourselves.\nThe STM32 Hardware Abstraction Layer (HAL) provides a simple, generic multi-instance set of APIs (application programming interfaces) to interact with the upper layers like the user application, libraries and stacks.\n\nIn this intermediate course we also implement more examples of embedded Ethernet applications.\n\nThis intermediate course can be divided into 4 major sections\n\nFirst Section\nIn the first section we give a short introduction to networking and then explore the ethernet capabilities of the STM32F7 microcontroller.\nSecond Section\nIn this section we write drivers for all the peripherals we will be using in the course. We write drivers for the ADC, UART, RCC and GPIO.\nThird Section\nIn the third section we write all the drivers required to fully configure the Ethernet module. We will implement a driver for configuring the Ethernet gpio pins to operate in RMII mode, we will implement a driver for transmitting packets, another one for receiving packets etc.\n\nIt is in this section that we decide on the Ethernet parameters such the speed, the duplex, whether to use auto-negotiation or not etc. After configuring the Ethernet module we conclude this section by implementing a function that interfaces our Ethernet module to the Light Weight IP (LwIP) library. LwIP is a small independent open-source implementation of the TCP/IP protocol stack designed for embedded systems.\n\nLast Section\nThe final section begins by giving an introduction to Light Weight IP (LwIP) and then goes on to build embedded Ethernet applications. Here are some the applications we shall build:\nChecking if the cable is connected\nGetting an IP address from DHCP\nHosting Webpages with httpd\nDisplaying Realtime Data on Webpages with SSI\nWorking with Multiple SSI Tags\nControlling Hardware from WebServers using CGI\nInjecting HTML code into a Webpage using SSI and CGI\nBy the end of this course...\nYou Will Be Able To :\nUnderstand the Fundamentals of Networking.\nUnderstand the fundamentals of the Light Weight IP (LwIP) stack.\nWrite Drivers for the STM32F7 Ethernet Peripheral using HAL APIs.\nWrite Embedded Ethernet Applications for Hosting Web pages.\nWrite Embedded Ethernet Applications for Controlling Hardware through Web pages.\nWrite Embedded Ethernet Applications for Sending Sensor Data to Web pages.",
+          "course-link": "https://study.embeddedexpert.io/p/eth_hal",
+          "category": "Intermediate",
+          "tags": [
+            "Embedded Ethernet",
+            "HAL",
+            "Intermediate",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "Build Your Own RealTime OS (RTOS 1) From Ground Up™ on ARM 1",
+          "description": "This course teaches you how to build a Real-Time Operating Systems through intensive practice and theory. It starts by getting you excited through an introduction to the internals of a Real-Time Kernel on ARM Processors, which you shall implement yourself in code. Then we move on to learn all there is about Real-Time Operating Systems, their various parts, how they work and then we finally build our own Real-Time Operating System exploring different scheduling algorithms and Inter-Thread communication tools.\n\nAt the end of this course you should be able to build your own Real-Time Operating System from scratch, give your own lecture on Real-Time Operating Systems, be able to build a Round-Robin Scheduler, be able to build a Periodic Scheduler, be able to calculate the CPU utilization of your RTOS, be able to build an OS Kernel etc. Please see the course curriculum section to find out all the amazing content awaiting you.\n\nWho is this course for?\n\nThis course is for anyone seeking to improve their embedded firmware development skills. This course focuses on how to apply object-oriented principles to embedded firmware development.\n\nCourse Content\n\nI personally guarantee that by the end of this course you will be able to accomplish the following:\nBuild a Real-Time Operating System from Scratch\nBuild Round-Robin Schedulers\nBuild Cooperative Schedulers\nBuild Periodic Schedulers\nBuild First Come First Served Scheduler\nBuild Rate Monotonic Schedulers\nBuild a board support package from scratch\nCalculate the CPU Utilization of an RTOS\nUnderstand the OS Support Features of the Cortex-M Architecture\nUnderstand the Internals of an RTOS Kernel\nBe able to implement and explain popular scheduling algorithms",
+          "course-link": "https://study.embeddedexpert.io/p/rtos1",
+          "category": "Intermediate",
+          "tags": [
+            "RTOS 1",
+            "ARM 1",
+            "RealTime OS",
+            "Intermediate",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "FreeRTOS From Ground Up™ on ARM Processors",
+          "description": "This course teaches you the foundations of real-time systems and how to build real-time applications using FreeRTOS, one of the most popular real-time operating systems for embedded systems. The course gives a detailed overview of the characteristics of the FreeRTOS real-time kernel, provides a detailed tutorial on the APIs to implement the various features of FreeRTOS and then goes on to build about 50 real-time projects. This course does not assume prior knowledge of real-time systems and application programming. By the end of this course you should be able to build your own multitask FreeRTOS real-time applications which use all the features of a modern real-time application (such as semaphores, mutexes, event flags, hooks, queues, mailboxes etc.) and test their performance. You should also be able to: Calculate the CPU Utilization of an RTOS, Understand Rate Monotonic Schedulers, port FreeRTOS to any ARM processor, Understand Round-Robin Schedulers, Understand Weighted-Round-Robin Schedulers, Understand First Come First Served Schedulers, Understand the Internals of an RTOS kernel, Implement and explain popular scheduling algorithms and so much more. Please take a look at the full course curriculum. Who is this course for? This course is for anyone seeking to improve their embedded firmware development skills. This course focuses on mastering the FreeRTOS realtime operating system.",
+          "course-link": "https://study.embeddedexpert.io/p/freertos-from-ground-up-on-arm-processors_new",
+          "category": "Intermediate",
+          "tags": [
+            "FreeRTOS",
+            "ARM Processors",
+            "RealTime OS",
+            "Intermediate",
+            "courses",
+            "course"
+          ]
+        },
+        {
+          "name": "Practical Low Cost Bare-Metal Bluetooth Development",
+          "description": "Hello, welcome to the “Practical Low Cost Bare-Metal Bluetooth Development” course. As the name implies this course teaches you how to develop bare-metal drivers and libraries for the popular low-cost Bluetooth chips currently on the market. In this course we cover chips across all Bluetooth protocols: Bluetooth Classic, Bluetooth 4.0 (BLE), Bluetooth 5.0(BLE). The primary objective of this course is to give you the skillset to professionally develop bare-metal Bluetooth enabled firmware. This is an important course in our embedded wireless development series. In this course we shall develop bare-metal drivers and libraries for the following low-cost Bluetooth chips: HC-06: Bluetooth Classic, HC-05: Bluetooth Classic, JDY-08: Bluetooth Low Energy (BLE) 4.0, HM-10: Bluetooth Low Energy (BLE) 4.0, HM-19: Bluetooth Low Energy (BLE) 5.0. So with that understood, let me tell you… Exactly What You’re Getting This course can be divided into 4 major sections. First Section: The first section is theoretical. In this section we shall learn about the Bluetooth protocol, its history, and the key differences amongst the various protocols. We shall also compare our selected Bluetooth chips across different parameters so that you will know the right chip to use for a particular use case. Second Section: In the second section we shall develop bare-metal drivers for interfacing the Bluetooth chip to our STM32 microcontroller. We shall navigate the microcontroller’s reference manual and datasheet to extract the right information to build these drivers. Third Section: After developing our drivers for interfacing the Bluetooth chip to our STM32 microcontroller, we shall go ahead and develop efficient data structures for managing communication between the Bluetooth chip and our microcontroller. Last Section: In the last section, we shall combine the drivers and data structures developed in the previous sections to develop a library for each of our Bluetooth chips. We shall then go on to use the library to develop Bluetooth enabled firmware applications such as: Sending data over Bluetooth from an STM32 slave device to a mobile phone master device, Sending data over Bluetooth from an STM32 master device, Receiving data over Bluetooth from an STM32 slave device, Receiving data over Bluetooth from an STM32 master device, Communicating wirelessly between two STM32 microcontrollers using Bluetooth classic, Communicating wirelessly between two STM32 microcontrollers using Bluetooth Low Energy (BLE), Controlling hardware modules by Bluetooth, Sending sensor data periodically over Bluetooth with a Realtime Clock (RTC), Sending sensor data over Bluetooth with RTC triggered alarm. As always, no copy/paste. We write each line code from scratch.",
+          "course-link": "https://study.embeddedexpert.io/p/generic-bluetooth",
+          "category": "Intermediate",
+          "tags": [
+            "Bluetooth Development",
+            "Practical Low Cost",
+            "BLE",
+            "Intermediate",
+            "courses",
+            "course"
+          ]
         }
       ]
     }
