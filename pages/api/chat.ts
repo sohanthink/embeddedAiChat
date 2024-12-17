@@ -28,7 +28,7 @@ const flattenData = (data: any[]) => {
       flatData.push(item); // Include everything else
     }
   });
-
+  console.log("flattenData",flattenData);
   return flatData;
 };
 
@@ -83,7 +83,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
       // Step 1: Search the JSON data
       const filteredResults = filterData(message, jsonData.data);
-
+      console.log('====================================');
+      console.log('Filtered Results:', filteredResults);
+      console.log('====================================');
       // Step 2: Format context dynamically for GPT
       if (filteredResults.length > 0) {
           const context = filteredResults.map((item) => {
@@ -94,6 +96,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               if (item.name && item.testimonial) return `Testimonial by ${item.name}: "${item.testimonial}"`;
               return `Info: ${item.description || item.about || ''}`;
           }).join("\n\n");
+          console.log('====================================');
+          console.log('Context:', context);
+          console.log('====================================');
           // Call OpenAI API with formatted context
           const completion = await openai.chat.completions.create({
               model: "gpt-4",
